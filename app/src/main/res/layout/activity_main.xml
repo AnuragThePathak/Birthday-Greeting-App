@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/askForName"
+        android:id="@+id/ask_for_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
@@ -19,32 +19,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/person_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:autofillHints=""
+        android:autofillHints="true"
         android:ems="10"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:hint="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/create_greeting_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/askForName" />
+        app:layout_constraintTop_toBottomOf="@+id/ask_for_name" />
 
     <Button
-        android:id="@+id/createGreetingButton"
+        android:id="@+id/create_greeting_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="createBirthCard"
         android:padding="20dp"
         android:text="@string/create_birthday_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.196"
-        android:onClick="createBirthCard"/>
+        app:layout_constraintTop_toBottomOf="@+id/person_name"
+        app:layout_constraintVertical_bias="0.196" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
