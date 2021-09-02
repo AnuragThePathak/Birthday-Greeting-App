@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun createBirthCard(view: android.view.View) {
-        Toast.makeText(this, "Happy Birthday ")
+        Toast.makeText(this, "Happy Birthday ", Toast.LENGTH_LONG).show()
     }
 }
