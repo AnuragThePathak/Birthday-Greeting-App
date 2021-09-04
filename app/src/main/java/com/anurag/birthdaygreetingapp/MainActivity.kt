@@ -13,12 +13,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         val view = binding.root
         setContentView(view)
     }
 
     fun createBirthCard(view: View) {
         val name = binding.personName.text.toString()
+
         val intent = Intent(this, BirthdayGreetingActivity::class.java)
         intent.putExtra(BirthdayGreetingActivity.NAME_EXTRA, name)
         startActivity(intent)
